@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="'utf-8" name="JasonChristopher" content="width=device-width, initial-scale=1">
+        <title>Jason Christopher Official Website</title>
+        <link rel="stylesheet" href="Personalwebsite.css">
+    </head>
+
+    <body>
+    <div class="header">
+      <h1 class="bouncing-letters">
+        <span>J</span>
+        <span>a</span>
+        <span>s</span>
+        <span>o</span>
+        <span>n</span>
+        <span>.</span>
+        
+      </h1>
+      <h1>
+        <span>C</span>
+        <span>K</span>
+      </h1>
+
+      <script> 
+        document.querySelectorAll(".bouncing-letters>span") 
+        .forEach((element) => { 
+            element.addEventListener("mouseover",  
+                                     (e) => bounce(e.target)); 
+        }); 
+  
+        function bounce(letter) { 
+            if (!letter.classList.contains("bounce")) { 
+                letter.classList.add("bounce"); 
+                setTimeout( 
+                    function () { 
+                        letter.classList.remove("bounce"); 
+                    }, 
+                    1000 
+                ); 
+            } 
+        } 
+    </script>
+    </div>
+
+    <div class="profile">
+      <p>
+        Greetings! I'm Jason, a passionate software developer.<br>
+        Here, I share my journey through the world of coding and showcase my projects. <br>
+        From crafting efficient algorithms to designing intuitive interfaces, I love turning ideas into functional software. <br>
+        Explore my work, insights, and tutorials. Let's shape the future, line by line of code!<span class="Blinkingcursor">|</span>
+      </p>
+    </div>
+
+   
+
+    </body>
+
+
+
+
+</html>
