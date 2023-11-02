@@ -26,12 +26,14 @@
 } 
 
 .bouncing-letters {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 700px;
     margin-left: 550px; 
     margin-bottom: 0px;
     font-size: 350px;
-    color: rgb(124, 196, 255);
+    color: rgb(206, 227, 245);
+    text-shadow: 14px 14px 14px #000000;
+
 }
 
 .bouncing-letters span { 
@@ -42,7 +44,7 @@
 } 
 
 .bouncing-letters span:hover { 
-    color: rgb(235, 130, 130); 
+    color: rgb(132, 132, 132); 
 } 
 
 @keyframes bounce { 
@@ -75,4 +77,5 @@
 
 body {
     background-color: rgb(40, 40, 40);
+    
 }
