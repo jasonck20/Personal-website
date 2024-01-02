@@ -1,60 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="'utf-8" name="JasonChristopher" content="width=device-width, initial-scale=1">
-        <title>Jason Christopher Official Website</title>
-        <link rel="stylesheet" href="Personalwebsite.css">
-    </head>
-
-    <body>
-    <div class="header">
-      <h1 class="bouncing-letters">
-        <span>J</span>
-        <span>a</span>
-        <span>s</span>
-        <span>o</span>
-        <span>n</span>
-        <span>.</span>
-        <span>C</span>
-        <span>K</span>
-      </h1>
-
-      <script> 
-        document.querySelectorAll(".bouncing-letters>span") 
-        .forEach((element) => { 
-            element.addEventListener("mouseover",  
-                                     (e) => bounce(e.target)); 
-        }); 
-  
-        function bounce(letter) { 
-            if (!letter.classList.contains("bounce")) { 
-                letter.classList.add("bounce"); 
-                setTimeout( 
-                    function () { 
-                        letter.classList.remove("bounce"); 
-                    }, 
-                    1000 
-                ); 
-            } 
-        } 
-    </script>
+<html>
+<head>
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Personalwebsite.css">
+    <style>
+         body {
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>   
+    <section>
+        <div class="topheader">
+            <marquee direction="up" height="120px" >
+                JASON 
+            </marquee>
+        </div>
+    </section>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Memoji_nobg.png" alt="Avatar" style="width:300px;height:300px;" class="center">
+          </div>
+          <div class="flip-card-back">
+            <h1>
+            Hi, I'm Jason Christopher — where computer algorithms meet athletic algorithms, coding by day and scoring by night!
+            </h1>
+          </div>
+        </div>
     </div>
+    <section> 
+        <div class="subheader">
+            <marquee direction="down" height="120px">
+                CHRISTOPHER
+            </marquee>
+        </div>    
 
-    <div class="profile">
-      <p>
-        Greetings! I'm Jason, a passionate software developer.<br>
-        Here, I share my journey through the world of coding and showcase my projects. <br>
-        From crafting efficient algorithms to designing intuitive interfaces, <br>
-        I love turning ideas into functional software. <br>
-        Explore my work, insights, and tutorials. Let's shape the future, line by line of code!;<span class="Blinkingcursor">|</span>
-      </p>
-    </div>
+    </section>
+    <script src="Personalwebsite.js"></script>
+    <div class="arrow bounce"></div>
+    <section class="page_2">
+        <div>
+            <h id="content" class="hidden">
+                A little about me 
+            </h>
+        </div>
 
-   
+    </section>
 
-    </body>
-
-
-
-
+</body>
 </html>
