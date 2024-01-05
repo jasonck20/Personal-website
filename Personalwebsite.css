@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     margin: auto;
     padding: 0;
-    background-color: #ffffff;
+    background-color: white;
     min-height: 5500px;
 }
 
@@ -49,12 +49,13 @@ html {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #363636;
+  background-color: white;
   color: #d2d2d2;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 7px;
   transform: rotateY(180deg);
 }
+
 
 .center {
     display: block;
@@ -64,23 +65,29 @@ html {
 }
 
 marquee {
-    margin-top: 70px;
+    margin-top: 60px;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 200px;
+    font-weight: 800;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: white;
 }
 
 h1 {
-    margin-top: 120px;
+    font-size: 130px;
+    margin-top: 100px;
 }
+
 
 .arrow {
   position: absolute;
   bottom: +2rem;
   left: 50%;
   margin-left:-20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 
   /**
    * Dark Arrow Down
@@ -110,10 +117,177 @@ h1 {
 }
 
 h {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  margin-left: 70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 150px;
-  color: antiquewhite;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
 }
 
 .hidden {
   display: none;
+} 
+
+.magnify span{
+  transition: transform 1 ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.magnify span:hover{
+  transform: scale(1.2);
+}
+
+.blur-effect span{
+  transition: filter 0.5s;
+  display: inline-block;
+  filter: blur(0);
+}
+
+.blur-effect span:hover {
+  filter: blur(5px);
+}
+
+.blur {
+  transition: filter 0.1s;
+  filter: blur(0)
+}
+
+.blur :hover{
+  filter: blur(1px)
+}
+
+.timeline {
+  color: antiquewhite; /* This sets the text color for the entire timeline */
+}
+
+/* Specific styles for each timeline container */
+.timeline-container {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 100px;
+  max-width: 600px; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Specific styles for each timeline container */
+.timeline-container1 {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 800px;
+  max-width: 600px; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Specific styles for each timeline container */
+.timeline-container2 {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 100px;
+  max-width: 600px; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.timeline-container2.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container1.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container.swipe {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.timeline-container1.swipe {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.timeline-container2.swipe {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+h2 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  color:bisque;
+  margin-left: 20px;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p1 {
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 8px #00cd5c,
+      0 0 16px #00cd5c,
+      0 0 24px #00cd5c,
+      0 0 32px #00cd5c,
+      0 0 40px #00cd5c,
+      0 0 48px #00cd5c,
+      0 0 56px #00cd5c,
+      0 0 64px #00cd5c;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #00cd5c,
+      0 0 6px #00cd5c,
+      0 0 10px #00cd5c,
+      0 0 14px #00cd5c,
+      0 0 18px #00cd5c,
+      0 0 22px #00cd5c,
+      0 0 26px #00cd5c,
+      0 0 30px #00cd5c;
+  }
+}
+
+.glowing-text {
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: Arial, sans-serif;
 }
