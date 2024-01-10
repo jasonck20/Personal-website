@@ -67,8 +67,8 @@ html {
 }
 
 @keyframes scrollMarqueeleft {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(300%); } /* Start from the right side of the screen */
+  100% { transform: translateX(-300%); } /* End to the left side of the screen */
 }
 
 .custom-marquee {
@@ -83,18 +83,21 @@ html {
   white-space: nowrap;
   position: relative;
   height: 15rem; /* Adjust based on your content */
-  margin-bottom: 5rem; /* Added spacing at the bottom */
+  margin-bottom: 5rem; /* Spacing at the bottom */
+  overflow: hidden; /* Hide overflow to ensure smooth animation start/end */
 }
 
 .custom-marquee div {
   position: absolute;
+  right: 100%; /* Start from outside of the right side of the screen */
   will-change: transform;
-  animation: scrollMarqueeleft 5s linear infinite;
+  animation: scrollMarqueeleft 10s linear infinite;
 }
 
+
 @keyframes scrollMarqueeright {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% { transform: translateX(-300%); }
+  100% { transform: translateX(300%); }
 }
 
 .custom-marquee1 {
@@ -115,7 +118,7 @@ html {
 .custom-marquee1 div {
   position: absolute;
   will-change: transform;
-  animation: scrollMarqueeright 5s linear infinite;
+  animation: scrollMarqueeright 11s linear infinite;
 }
 
 h1 {
