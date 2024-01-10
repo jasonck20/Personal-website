@@ -82,7 +82,7 @@ html {
   max-width: 100%;
   white-space: nowrap;
   position: relative;
-  height: 15rem; /* Adjust based on your content */
+  height: 14rem; /* Adjust based on your content */
   margin-bottom: 0 rem; /* Spacing at the bottom */
   overflow: hidden; /* Hide overflow to ensure smooth animation start/end */
 }
@@ -111,7 +111,7 @@ html {
   max-width: 100%;
   white-space: nowrap;
   position: relative;
-  height: 15rem; /* Adjust based on your content */
+  height: 14rem; /* Adjust based on your content */
   margin-bottom: 5rem; /* Added spacing at the bottom */
 }
 
