@@ -83,7 +83,7 @@ html {
   white-space: nowrap;
   position: relative;
   height: 15rem; /* Adjust based on your content */
-  margin-bottom: 5rem; /* Spacing at the bottom */
+  margin-bottom: 0 rem; /* Spacing at the bottom */
   overflow: hidden; /* Hide overflow to ensure smooth animation start/end */
 }
 
