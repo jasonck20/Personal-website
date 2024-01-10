@@ -16,7 +16,7 @@ html {
   background-color: transparent;
   width: auto;
   max-width: 100%;
-  height: 20rem;
+  height: 18rem;
 }
 
 /* This container is needed to position the front and back side */
@@ -67,8 +67,8 @@ html {
 }
 
 @keyframes scrollMarqueeleft {
-  0% { transform: translateX(300%); } /* Start from the right side of the screen */
-  100% { transform: translateX(-300%); } /* End to the left side of the screen */
+  0% { transform: translateX(400%); } /* Start from the right side of the screen */
+  100% { transform: translateX(-400%); } /* End to the left side of the screen */
 }
 
 .custom-marquee {
