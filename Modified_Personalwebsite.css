@@ -1,0 +1,333 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    background-color: white;
+    min-height: 500rem;
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+html {
+  scroll-behavior: smooth;
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  margin: auto;
+  background-color: transparent;
+  width: auto;
+  max-width: 100%;
+  height: 20rem;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: #d2d2d2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 7rem;
+  transform: rotateY(180deg);
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+}
+
+marquee {
+    margin-top: 4rem;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12rem;
+    font-weight: 800;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    color: white;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 10rem;
+    margin-top: 1rem;
+}
+
+
+.arrow {
+  position: absolute;
+  bottom: +2rem;
+  left: 50%;
+  width: 4rem;
+  height: 4rem;
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url(https://static.thenounproject.com/png/2171431-200.png);
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.page_2 {
+  margin-top: 360px;
+}
+
+.content_3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 150px;
+  color: salmon;
+  -webkit-text-stroke-width: 7px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+h {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  margin-left: 7rem;
+  max-width: 80%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 9rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.hidden {
+  display: none;
+} 
+
+.magnify span{
+  transition: transform 1 ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.magnify span:hover{
+  transform: scale(1.2);
+}
+
+.blur-effect span{
+  transition: filter 0.5s;
+  display: inline-block;
+  filter: blur(0);
+}
+
+.blur-effect span:hover {
+  filter: blur(5px);
+}
+
+.blur {
+  transition: filter 0.1s;
+  filter: blur(0)
+}
+
+.blur :hover{
+  filter: blur(1px)
+}
+
+.timeline {
+  color: antiquewhite; /* This sets the text color for the entire timeline */
+}
+
+/* Specific styles for each timeline container */
+.timeline-container {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 5%;
+  max-width: 33%; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Specific styles for each timeline container */
+.timeline-container1 {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 45%;
+  max-width: 33%; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Specific styles for each timeline container */
+.timeline-container2 {
+  background-color: rgb(221, 221, 221); /* Background of each container */
+  color: black; /* Text color for each container */
+  padding: 20px;
+  margin: 30px 0;
+  margin-left: 5%;
+  max-width: 33%; /* Adjust this value as needed */
+  min-height: 200px;
+  border-radius: 40px;
+  opacity: 0; /* Start with hidden for animation */
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+.timeline-container2.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container1.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-container.swipe {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-100%);
+}
+
+.timeline-container1.swipe {
+  opacity: 0;
+  transform: translateX(100%) translateY(-100%);
+}
+
+.timeline-container2.swipe {
+  opacity: 0;
+  transform: translateX(-100%) translateY(-100%);
+}
+
+.content_3 {
+  opacity: 0; 
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  color: #000000;
+}
+
+.content_3.swipe {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+h2 {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  color:bisque;
+  margin-left: 20px;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p1 {
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 8px #00cd5c,
+      0 0 16px #00cd5c,
+      0 0 24px #00cd5c,
+      0 0 32px #00cd5c,
+      0 0 40px #00cd5c,
+      0 0 48px #00cd5c,
+      0 0 56px #00cd5c,
+      0 0 64px #00cd5c;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #00cd5c,
+      0 0 6px #00cd5c,
+      0 0 10px #00cd5c,
+      0 0 14px #00cd5c,
+      0 0 18px #00cd5c,
+      0 0 22px #00cd5c,
+      0 0 26px #00cd5c,
+      0 0 30px #00cd5c;
+  }
+}
+
+.glowing-text {
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  font-family: Arial, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+body {
+    max-width: 100vw;
+}
