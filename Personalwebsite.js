@@ -1,3 +1,12 @@
+// Set constants
+const triggerPoint_1 = 900; // Adjust this value to your desired scroll point
+const triggerPoint_2 = 1100;
+const triggerPoint_3 = 1300;
+const triggerPoint_4 = 1400;
+const triggerPoint_5 = 1600;
+const triggerPoint_6 = 1800;
+const triggerPoint_7 = 1950;
+
 // For changes in background
 document.addEventListener("scroll", function() {
     var scrollPosition = window.scrollY;
@@ -8,7 +17,7 @@ document.addEventListener("scroll", function() {
         document.body.style.backgroundColor = "black";
     } if (scrollPosition < transitionPoint_page1) {
         document.body.style.backgroundColor = "white";
-    } if (scrollPosition > transitionPoint_page2){
+    } if (scrollPosition >= transitionPoint_page2){
         document.body.style.backgroundColor = 'salmon';
     }
 });
@@ -16,14 +25,19 @@ document.addEventListener("scroll", function() {
 // For header
 document.addEventListener('scroll', function() {
     var contentElement = document.getElementById('content');
-    var page_3 = document.getElementById('page3');
+    var page_3 = document.getElementsByClassName('content_3');
     var scrollPosition = window.scrollY || window.pageYOffset;
     var contentPosition = 500; // Change this value to the point you want
 
     if (scrollPosition > contentPosition) {
         contentElement.classList.remove('hidden');
-    } else {
+    } if (scrollPosition <= contentPosition) {
         contentElement.classList.add('hidden');
+    } if (scrollPosition >= triggerPoint_7) {
+        page_3.classList.remove('swipe')
+        
+    } if (scrollPosition < triggerPoint_7) {
+        page_3.classList.add('swipe')
     }
 });
 
@@ -34,13 +48,6 @@ function isInViewport(element) {
         rect.bottom >= 0
     );
 }
-
-const triggerPoint_1 = 900; // Adjust this value to your desired scroll point
-const triggerPoint_2 = 1100;
-const triggerPoint_3 = 1300;
-const triggerPoint_4 = 1400;
-const triggerPoint_5 = 1600;
-const triggerPoint_6 = 1800;
 
 // Function to add 'show' class to timeline containers based on scroll position
 function showTimelineContainers() {

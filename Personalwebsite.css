@@ -4,8 +4,8 @@ body {
     margin: auto;
     padding: 0;
     background-color: white;
-    min-height: 5500px;
-}
+    min-height: 500rem;
+    }
 
 html {
   scroll-behavior: smooth;
@@ -14,8 +14,8 @@ html {
 .flip-card {
   margin: auto;
   background-color: transparent;
-  width: 500px;
-  height: 400px;
+  width: 50rem;
+  height: 20rem;
 }
 
 /* This container is needed to position the front and back side */
@@ -52,7 +52,7 @@ html {
   background-color: white;
   color: #d2d2d2;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 7px;
+  font-size: 7rem;
   transform: rotateY(180deg);
 }
 
@@ -61,14 +61,14 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
+    width: 50rem;
 }
 
 marquee {
-    margin-top: 60px;
+    margin-top: 4rem;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 200px;
+    font-size: 13rem;
     font-weight: 800;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -76,8 +76,8 @@ marquee {
 }
 
 h1 {
-    font-size: 130px;
-    margin-top: 100px;
+    font-size: 10rem;
+    margin-top: 1rem;
 }
 
 
@@ -86,8 +86,8 @@ h1 {
   bottom: +2rem;
   left: 50%;
   margin-left:-20px;
-  width: 50px;
-  height: 50px;
+  width: 4rem;
+  height: 4rem;
 
   /**
    * Dark Arrow Down
@@ -116,12 +116,21 @@ h1 {
   margin-top: 360px;
 }
 
+.content_3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 150px;
+  color: salmon;
+  -webkit-text-stroke-width: 7px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
 h {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
-  margin-left: 70px;
+  margin-left: 7rem;
+  max-width: 80%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 150px;
+  font-size: 9rem;
   font-weight: 600;
   color: rgb(0, 0, 0);
 }
@@ -169,8 +178,8 @@ h {
   color: black; /* Text color for each container */
   padding: 20px;
   margin: 30px 0;
-  margin-left: 100px;
-  max-width: 600px; /* Adjust this value as needed */
+  margin-left: 5%;
+  max-width: 33%; /* Adjust this value as needed */
   min-height: 200px;
   border-radius: 40px;
   opacity: 0; /* Start with hidden for animation */
@@ -184,8 +193,8 @@ h {
   color: black; /* Text color for each container */
   padding: 20px;
   margin: 30px 0;
-  margin-left: 800px;
-  max-width: 600px; /* Adjust this value as needed */
+  margin-left: 45%;
+  max-width: 33%; /* Adjust this value as needed */
   min-height: 200px;
   border-radius: 40px;
   opacity: 0; /* Start with hidden for animation */
@@ -199,8 +208,8 @@ h {
   color: black; /* Text color for each container */
   padding: 20px;
   margin: 30px 0;
-  margin-left: 100px;
-  max-width: 600px; /* Adjust this value as needed */
+  margin-left: 5%;
+  max-width: 33%; /* Adjust this value as needed */
   min-height: 200px;
   border-radius: 40px;
   opacity: 0; /* Start with hidden for animation */
@@ -226,17 +235,29 @@ h {
 
 .timeline-container.swipe {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-100%) translateY(-100%);
 }
 
 .timeline-container1.swipe {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(100%) translateY(-100%);
 }
 
 .timeline-container2.swipe {
   opacity: 0;
+  transform: translateX(-100%) translateY(-100%);
+}
+
+.content_3 {
+  opacity: 0; 
   transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  color: #000000;
+}
+
+.content_3.swipe {
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 h2 {
